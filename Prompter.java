@@ -51,7 +51,7 @@ Console console = System.console();
     }
     
 
-    System.out.println(mGame.getLives() + " Lives left. When you're ready, hit ENTER to continue...");
+    System.out.println(mGame.getLives() + " Games remaining. \nWhen you're ready, hit ENTER to continue...");
       try {
         System.in.read();
       }  
@@ -76,7 +76,7 @@ Console console = System.console();
       }
 
       if (mGame.testGuess(guessToInt) == 1){
-        console.printf("\nCongrats!! You got it in %d attempt(s) \n\n", attempts);
+        console.printf("\nCongrats! %s %s(s) in the Jar! You got it in %d attempt(s) \n\n",mGame.getRandomNumber(),mGame.getItemName(), attempts);
       } else if (mGame.testGuess(guessToInt) == 2){
         console.printf("To high, try again \n");
       } else if (mGame.testGuess(guessToInt) == 3)
