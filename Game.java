@@ -73,6 +73,7 @@ public class Game {
     return true;
   }
   
+  //Testing the answer guessed in prompter
   public int testGuess(int guessMade) {
     if (guessMade == mRandomNumber){
       return 1;
@@ -83,7 +84,7 @@ public class Game {
     } 
     return 4;
   }
-    
+  //Calculate and replace high score with new best score if made  
   public int highScoreCalculation(int score) {
     if (score < mHighScore){
      mHighScore = score;

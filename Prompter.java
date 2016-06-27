@@ -10,7 +10,7 @@ Console console = System.console();
     mGame = game;
   }
   
-  
+  // calls the relevant methods depending on the game progress
   public void startGame() {
     if ((mGame.getMaximumNumberOfItems() ==0) || (mGame.getLives() == 4)){
         displayAdminSection();
@@ -21,7 +21,7 @@ Console console = System.console();
         startGuessing();
 
   }
-  
+  //Admin setup squestions section
   public void displayAdminSection() {
     console.printf("-----------ADMIN--SETUP--------------- \n======================================\n");
     String NameOfItemsInJar = console.readLine("Name of items that would be in the jar: ");
@@ -32,7 +32,7 @@ Console console = System.console();
    
   }
   
-  
+  //Create random number and prompt the user for username for guessing game. 
   public void playerInput() {
     Random random = new Random();
     int maxNumberAllowed = mGame.getMaximumNumberOfItems();
@@ -59,7 +59,7 @@ Console console = System.console();
         {}  
   
   }
-  
+  //Guesses are made and compared to what has been set in the game class
   public void startGuessing() {
     boolean validGuess = false;
     int attempts = 0;
@@ -88,12 +88,5 @@ Console console = System.console();
     startGame();
          
   }
-  
-
-  
-  
-
-  
-  
-  
+ 
 }
